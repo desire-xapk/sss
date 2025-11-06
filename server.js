@@ -1,10 +1,10 @@
-// server.js — минимальный REST для обмена SDP (P2P лобби)
 import express from "express";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(cors());            // ✅ Разрешает внешние запросы (включая localhost)
 app.use(express.json());
+
 
 // временное хранилище комнат в памяти
 const rooms = new Map();
